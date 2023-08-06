@@ -1,0 +1,58 @@
+Build command:
+dotnet build /p:GenerateTimestamp=true /verbosity:detailed
+
+https://learn.microsoft.com/de-de/sysinternals/downloads/procmon
+
+string portText = portInput.Text;
+
+            if (int.TryParse(portText, out int port))
+            {
+                TcpListener listener = new TcpListener(IPAddress.Any, port);
+                listener.Start();
+
+                MessageBox.Show($"Server started and listening on {IPAddress.Any}:{port}");
+
+                try
+                {
+                    while (true)
+                    {
+                        TcpClient client = listener.AcceptTcpClient();                              
+                            try
+                            {
+                                using (NetworkStream networkStream = client.GetStream())
+                                {
+                                    byte[] buffer = new byte[1024];
+                                    int bytesRead;
+                                    string receivedFilePath = "received_file.txt";
+
+                                    using (FileStream fileStream = File.Create(receivedFilePath))
+                                    {
+                                        while ((bytesRead = networkStream.Read(buffer, 0, buffer.Length)) > 0)
+                                        {
+                                            fileStream.Write(buffer, 0, bytesRead);
+                                        }
+
+                                        MessageBox.Show("File received: " + receivedFilePath);
+                                    }
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error receiving file: " + ex.Message);
+                            }
+                            finally
+                            {
+                                client.Close();
+                            }
+                        
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error in receiving data: " + ex.Message);
+                }
+                finally
+                {
+                    listener.Stop();
+                }
+            }

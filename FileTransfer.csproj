@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>10.0</LangVersion>
+    <OutputPath>$(MSBuildThisFileDirectory)bin\$(MSBuildProjectName)_$(Year)$(Month)$(Day)$(Hour)$(Minute)\</OutputPath>
+    <PreBuildEvent>del /q "$(OutputPath)\*.*"</PreBuildEvent>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+
+  <Target Name="GenerateTimestamp" BeforeTargets="BeforeBuild">
+    <Message Importance="High" Text="Executing GenerateTimestamp target..." />
+    <PropertyGroup>
+      <Year>$([System.DateTime]::Now.ToString('yyyy'))</Year>
+      <Month>$([System.DateTime]::Now.ToString('MM'))</Month>
+      <Day>$([System.DateTime]::Now.ToString('dd'))</Day>
+      <Hour>$([System.DateTime]::Now.ToString('HH'))</Hour>
+      <Minute>$([System.DateTime]::Now.ToString('mm'))</Minute>
+    </PropertyGroup>
+  </Target>
+
+</Project>

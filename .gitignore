@@ -1,0 +1,39 @@
+# .NET build files
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.exe.config
+*.json
+*.user
+*.suo
+*.cache
+*.log
+*.vs/
+bin/
+obj/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio files
+*.sln
+*.suo
+*.user
+*.csproj
+*.csproj.user
+*.sln.DotSettings
+.vs/
+*.vscode/
+
+# NuGet packages
+*.nuget/
+packages/
+
+# Resharper files
+_ReSharper.*/
+
+# Others
+*.DS_Store
+Thumbs.db

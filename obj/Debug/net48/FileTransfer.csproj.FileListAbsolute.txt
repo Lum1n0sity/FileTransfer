@@ -1,0 +1,11 @@
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\bin\FileTransfer_\net48\FileTransfer.exe.config
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\bin\FileTransfer_\net48\FileTransfer.exe
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\bin\FileTransfer_\net48\FileTransfer.pdb
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\obj\Debug\net48\FileTransfer.csproj.AssemblyReference.cache
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\obj\Debug\net48\FileTransfer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\obj\Debug\net48\FileTransfer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\obj\Debug\net48\FileTransfer.AssemblyInfoInputs.cache
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\obj\Debug\net48\FileTransfer.AssemblyInfo.cs
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\obj\Debug\net48\FileTransfer.csproj.CoreCompileInputs.cache
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\obj\Debug\net48\FileTransfer.exe
+C:\Users\Praktikant\Documents\Praktika2023\C#DataTransfer\FileTransferC#\obj\Debug\net48\FileTransfer.pdb
